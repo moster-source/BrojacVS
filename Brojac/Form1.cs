@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+//using System.Threading;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Brojac
@@ -27,11 +30,17 @@ namespace Brojac
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
+        int intMinute;
+        int intSekunde;
+        //System.Threading.Timer t = new System.Threading.Timer(TimerCallbackx, null, 0, 1000);
+        
         public Form1()
 
 
         {
             InitializeComponent();
+            
+
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -46,6 +55,37 @@ namespace Brojac
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private static void TimerCallbackx(Object o)
+
+        {
+            //Console.WriteLine("In TimerCallback: " + DateTime.Now);
+            DialogResult d;
+            d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
+            SystemSounds.Beep.Play();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                intMinute = Convert.ToInt32(txtVrijeme.Text);
+                lblVrijeme.Text = intMinute.ToString() + ":" + "00";
+                intSekunde = 0;
+            }
+            catch (FormatException)
+            {
+                intMinute = 0;
+                intSekunde = 0;
+                lblVrijeme.Text = intMinute.ToString() + ":" + "00";
+            }
+            
+
         }
     }
 }
