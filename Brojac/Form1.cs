@@ -32,15 +32,17 @@ namespace Brojac
 
         int intMinute;
         int intSekunde;
+        System.Threading.Timer t;
+        public static System.Timers.Timer _timer = new System.Timers.Timer();
         //System.Threading.Timer t = new System.Threading.Timer(TimerCallbackx, null, 0, 1000);
-        
+        //https://docs.microsoft.com/en-us/dotnet/api/system.timers.timer.elapsed?view=net-6.0
         public Form1()
 
 
         {
             InitializeComponent();
             
-
+            
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -59,7 +61,8 @@ namespace Brojac
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+            if t.enabled
+            t = new System.Threading.Timer(TimerCallbackx, null, 0, 1000);
         }
         private static void TimerCallbackx(Object o)
 
