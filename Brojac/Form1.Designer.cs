@@ -29,38 +29,42 @@
         private void InitializeComponent()
         {
             this.lblExit = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblVrijeme = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblExit
             // 
             this.lblExit.AutoSize = true;
-            this.lblExit.Location = new System.Drawing.Point(143, 9);
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblExit.Location = new System.Drawing.Point(92, -1);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(13, 16);
+            this.lblExit.Size = new System.Drawing.Size(15, 16);
             this.lblExit.TabIndex = 0;
-            this.lblExit.Text = "x";
+            this.lblExit.Text = "X";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
-            // label1
+            // lblVrijeme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(-1, -1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "00:00";
+            this.lblVrijeme.AutoSize = true;
+            this.lblVrijeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblVrijeme.Location = new System.Drawing.Point(0, -1);
+            this.lblVrijeme.Name = "lblVrijeme";
+            this.lblVrijeme.Size = new System.Drawing.Size(86, 32);
+            this.lblVrijeme.TabIndex = 1;
+            this.lblVrijeme.Text = "00:00";
+            this.lblVrijeme.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblVrijemeMouseDown);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(183, 59);
+            this.ClientSize = new System.Drawing.Size(148, 29);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVrijeme);
             this.Controls.Add(this.lblExit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +73,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblExit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVrijeme;
     }
 }
 
