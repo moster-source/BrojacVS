@@ -32,17 +32,19 @@ namespace Brojac
 
         int intMinute;
         int intSekunde;
-        System.Threading.Timer t;
-        public static System.Timers.Timer _timer = new System.Timers.Timer();
-        //System.Threading.Timer t = new System.Threading.Timer(TimerCallbackx, null, 0, 1000);
-        //https://docs.microsoft.com/en-us/dotnet/api/system.timers.timer.elapsed?view=net-6.0
+
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+
         public Form1()
 
 
         {
             InitializeComponent();
-            
-            
+            t.Interval = 1000; // specify interval time as you want
+            t.Tick += new EventHandler(timer_Tick);
+            t.Enabled = false;
+
+
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -59,20 +61,38 @@ namespace Brojac
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e) //klik na start
         {
-            if t.enabled
-            t = new System.Threading.Timer(TimerCallbackx, null, 0, 1000);
-        }
-        private static void TimerCallbackx(Object o)
-
-        {
-            //Console.WriteLine("In TimerCallback: " + DateTime.Now);
-            DialogResult d;
-            d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
-            SystemSounds.Beep.Play();
+            if (t.Enabled)
+            {
+                t.Stop();
+            }
+            else 
+            {
+                t.Start();
+            }
         }
 
+        private static void timer_Tick(object sender, EventArgs e) { //funkcija timera
+
+            //DialogResult d;
+            //d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
+
+            Console.WriteLine("In TimerCallback: " + DateTime.Now);
+
+
+        }
+
+        /*
+                private static void TimerCallbackx(Object o)
+
+                {
+                    //Console.WriteLine("In TimerCallback: " + DateTime.Now);
+                    DialogResult d;
+                    d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
+                    SystemSounds.Beep.Play();
+                }
+        */
         private void label2_Click(object sender, EventArgs e)
         {
             try
