@@ -3,9 +3,9 @@ C:\goran\Apps\VSProjects\Brojac\Brojac\bin\Debug\Brojac.exe
 C:\goran\Apps\VSProjects\Brojac\Brojac\bin\Debug\Brojac.pdb
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.csproj.AssemblyReference.cache
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.csproj.SuggestedBindingRedirects.cache
+C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.Form1.resources
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.Properties.Resources.resources
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.csproj.GenerateResource.cache
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.csproj.CoreCompileInputs.cache
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.exe
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.pdb
-C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.Form1.resources

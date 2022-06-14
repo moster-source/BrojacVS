@@ -36,15 +36,11 @@ namespace Brojac
         System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
 
         public Form1()
-
-
         {
             InitializeComponent();
             t.Interval = 1000; // specify interval time as you want
             t.Tick += new EventHandler(timer_Tick);
             t.Enabled = false;
-
-
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -79,7 +75,6 @@ namespace Brojac
             //d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
 
             Console.WriteLine("In TimerCallback: " + DateTime.Now);
-
 
         }
 
