@@ -75,7 +75,7 @@ namespace Brojac
             }
         }
 
-        private static void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
             if (sec == 0) 
             {
