@@ -19,8 +19,6 @@ namespace Brojac
 
 
     public partial class Form1 : Form
-
-
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -30,10 +28,13 @@ namespace Brojac
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        int intMinute;
-        int intSekunde;
 
-        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+        public static System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+        public static int min;
+        public static int sec;
+        public static int minEntered;
+
+
 
         public Form1()
         {
@@ -41,6 +42,11 @@ namespace Brojac
             t.Interval = 1000; // specify interval time as you want
             t.Tick += new EventHandler(timer_Tick);
             t.Enabled = false;
+
+            min = 15;
+            minEntered = 15;
+            sec = 0;
+
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -69,38 +75,31 @@ namespace Brojac
             }
         }
 
-        private static void timer_Tick(object sender, EventArgs e) { //funkcija timera
-
-            //DialogResult d;
-            //d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
-
-            Console.WriteLine("In TimerCallback: " + DateTime.Now);
+        private static void timer_Tick(object sender, EventArgs e)
+        {
+            if (sec == 0) 
+            {
+                if (min == 1)
+                {
+                    //MessageBeep (MB_DEFAULTBEEP)
+                    lblVrijeme.Text = "";
+                }
+            }
 
         }
-
-        /*
-                private static void TimerCallbackx(Object o)
-
-                {
-                    //Console.WriteLine("In TimerCallback: " + DateTime.Now);
-                    DialogResult d;
-                    d = MessageBox.Show("Timer call back", "timjer test", MessageBoxButtons.OK);
-                    SystemSounds.Beep.Play();
-                }
-        */
         private void label2_Click(object sender, EventArgs e)
         {
             try
             {
-                intMinute = Convert.ToInt32(txtVrijeme.Text);
-                lblVrijeme.Text = intMinute.ToString() + ":" + "00";
-                intSekunde = 0;
+                min = Convert.ToInt32(txtVrijeme.Text);
+                lblVrijeme.Text = min.ToString() + ":" + "00";
+                sec = 0;
             }
             catch (FormatException)
             {
-                intMinute = 0;
-                intSekunde = 0;
-                lblVrijeme.Text = intMinute.ToString() + ":" + "00";
+                min = 0;
+                min = 0;
+                lblVrijeme.Text = min.ToString() + ":" + "00";
             }
             
 
