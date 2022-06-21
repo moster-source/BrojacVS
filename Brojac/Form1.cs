@@ -68,9 +68,13 @@ namespace Brojac
             if (t.Enabled)
             {
                 t.Stop();
+                sec=0;
+                min = minEntered;
+                return;
             }
             else 
             {
+                //if backcolor red then poplavi
                 t.Start();
             }
         }
@@ -81,9 +85,23 @@ namespace Brojac
             {
                 if (min == 1)
                 {
-                    //MessageBeep (MB_DEFAULTBEEP)
-                    lblVrijeme.Text = "";
+                    SystemSounds.Beep.Play();
+                    //lblVrijeme.Text = "";
                 }
+                if (min == 0) {
+                    lblVrijeme.Text =min.ToString() + ":" + sec.ToString();
+                    min = minEntered;
+                    t.Stop();
+                    return;
+                }
+            }
+            
+            lblVrijeme.Text = min.ToString() + ":" + sec.ToString();
+            sec = sec - 1;
+            
+            if (sec == -1) {
+                sec = 59;
+                min = min - 1;
             }
 
         }
