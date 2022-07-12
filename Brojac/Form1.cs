@@ -155,8 +155,10 @@ namespace Brojac
             }
             else
             {
-                this.BackColor = SystemColors.Control;
-                this.lblVrijeme.BackColor = SystemColors.Control;
+                //this.BackColor = SystemColors.Control;
+                this.BackColor = Color.White;
+                //this.lblVrijeme.BackColor = SystemColors.Control;
+                this.lblVrijeme.BackColor = Color.White;
             }
               
         }
@@ -185,7 +187,7 @@ namespace Brojac
                 txtVrijeme.Visible = true;
                 label2.Visible = true;
                 label1.Visible = false;
-                lblVrijeme.Visible=false;
+                lblVrijeme.Visible = false;
                 pocrveni(false);
                 this.txtVrijeme.Focus();
                 //MessageBox.Show("", "");
@@ -193,5 +195,6 @@ namespace Brojac
             }
         }
 
+        
     }
 }
