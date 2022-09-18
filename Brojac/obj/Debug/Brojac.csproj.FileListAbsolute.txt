@@ -13,3 +13,10 @@ C:\goran\Apps\VSProjects\Brojac\Brojac\bin\Debug\Brojac.exe.manifest
 C:\goran\Apps\VSProjects\Brojac\Brojac\bin\Debug\Brojac.application
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.exe.manifest
 C:\goran\Apps\VSProjects\Brojac\Brojac\obj\Debug\Brojac.application
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.csproj.AssemblyReference.cache
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.csproj.SuggestedBindingRedirects.cache
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.Form1.resources
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.Properties.Resources.resources
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.csproj.GenerateResource.cache
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.exe
+E:\java\VisualStudioProjects\BrojacVS\Brojac\obj\Debug\Brojac.pdb
